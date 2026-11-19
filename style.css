@@ -23,19 +23,30 @@ body {
 /* Styles the main drum kit container */
 .drum-kit {
     text-align: center;
+    width: 90%;
+    max-width: 750px;
 }
 
 /* Styles the main heading */
 h1 {
     text-align: center;
     font-size: 40px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
-/* Styles both drum buttons */
+/* Arranges the drum buttons */
+.drum-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Styles all drum buttons */
 .drum-button {
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
 
     background-color: #e63946;
     color: white;
@@ -43,13 +54,24 @@ h1 {
     border: 5px solid white;
     border-radius: 50%;
 
-    font-size: 28px;
+    font-size: 22px;
     font-weight: bold;
 
     cursor: pointer;
-    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 
     transition: transform 0.1s, background-color 0.2s;
+}
+
+/* Shows the keyboard shortcut inside each button */
+.drum-button span {
+    font-size: 14px;
+    opacity: 0.8;
 }
 
 /* Changes the kick button when hovered over */
@@ -57,17 +79,62 @@ h1 {
     background-color: #c1121f;
 }
 
-/* Gives the ride button a different color */
+/* Styles the ride button */
 .ride-button {
     background-color: #457b9d;
 }
 
-/* Changes the ride button when hovered over */
 .ride-button:hover {
     background-color: #1d5b7a;
 }
 
-/* Makes the buttons react when clicked */
+/* Styles the snare button */
+.snare-button {
+    background-color: #7e57c2;
+}
+
+.snare-button:hover {
+    background-color: #5e35b1;
+}
+
+/* Styles the tom button */
+.tom-button {
+    background-color: #2a9d8f;
+}
+
+.tom-button:hover {
+    background-color: #20796e;
+}
+
+/* Styles the hi-hat button */
+.hihat-button {
+    background-color: #e9a23b;
+}
+
+.hihat-button:hover {
+    background-color: #c47d18;
+}
+
+/* Makes buttons react when clicked */
 .drum-button:active {
     transform: scale(0.90);
+}
+
+/* Adjusts the layout for smaller screens */
+@media (max-width: 600px) {
+
+    .drum-kit {
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .drum-button {
+        width: 110px;
+        height: 110px;
+        font-size: 18px;
+    }
+
 }

@@ -1,57 +1,88 @@
 
-// Gets the kick button from the HTML
+// Gets all drum buttons from the HTML
 var kickButton = document.getElementById("kickButton");
-
-// Gets the ride button from the HTML
 var rideButton = document.getElementById("rideButton");
+var snareButton = document.getElementById("snareButton");
+var tomButton = document.getElementById("tomButton");
+var hihatButton = document.getElementById("hihatButton");
 
-// Gets the kick audio element from the HTML
+// Gets all audio elements from the HTML
 var kickSound = document.getElementById("kickSound");
-
-// Gets the ride audio element from the HTML
 var rideSound = document.getElementById("rideSound");
+var snareSound = document.getElementById("snareSound");
+var tomSound = document.getElementById("tomSound");
+var hihatSound = document.getElementById("hihatSound");
 
 // Function to play the kick sound
 function playKick() {
-
-    // Resets the kick sound to the beginning
     kickSound.currentTime = 0;
-
-    // Plays the kick drum sound
     kickSound.play();
 }
 
 // Function to play the ride sound
 function playRide() {
-
-    // Resets the ride sound to the beginning
     rideSound.currentTime = 0;
-
-    // Plays the ride cymbal sound
     rideSound.play();
 }
 
-// Runs when the kick button is clicked
-kickButton.addEventListener("click", function() {
-    playKick();
-});
+// Function to play the snare sound
+function playSnare() {
+    snareSound.currentTime = 0;
+    snareSound.play();
+}
 
-// Runs when the ride button is clicked
-rideButton.addEventListener("click", function() {
-    playRide();
-});
+// Function to play the tom sound
+function playTom() {
+    tomSound.currentTime = 0;
+    tomSound.play();
+}
+
+// Function to play the hi-hat sound
+function playHihat() {
+    hihatSound.currentTime = 0;
+    hihatSound.play();
+}
+
+// Plays the kick sound when its button is clicked
+kickButton.addEventListener("click", playKick);
+
+// Plays the ride sound when its button is clicked
+rideButton.addEventListener("click", playRide);
+
+// Plays the snare sound when its button is clicked
+snareButton.addEventListener("click", playSnare);
+
+// Plays the tom sound when its button is clicked
+tomButton.addEventListener("click", playTom);
+
+// Plays the hi-hat sound when its button is clicked
+hihatButton.addEventListener("click", playHihat);
 
 // Detects when a keyboard key is pressed
 document.addEventListener("keydown", function(event) {
 
-    // Plays the kick sound when the A key is pressed
-    if (event.key.toLowerCase() === "a") {
+    // Gets the pressed key in lowercase
+    var key = event.key.toLowerCase();
+
+    // Plays the corresponding drum sound
+    if (key === "a") {
         playKick();
     }
 
-    // Plays the ride sound when the S key is pressed
-    if (event.key.toLowerCase() === "s") {
+    else if (key === "s") {
         playRide();
+    }
+
+    else if (key === "d") {
+        playSnare();
+    }
+
+    else if (key === "f") {
+        playTom();
+    }
+
+    else if (key === "g") {
+        playHihat();
     }
 
 });
