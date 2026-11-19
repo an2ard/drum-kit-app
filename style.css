@@ -1,4 +1,3 @@
-
 /* Removes default spacing and controls element sizing */
 * {
     margin: 0;
@@ -12,7 +11,6 @@ body {
     background-color: #222222;
     color: white;
 
-    /* Centers the content horizontally and vertically */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,16 +18,15 @@ body {
     min-height: 100vh;
 }
 
-/* Styles the main drum kit container */
+/* Main drum kit container */
 .drum-kit {
     text-align: center;
     width: 90%;
     max-width: 750px;
 }
 
-/* Styles the main heading */
+/* Main heading */
 h1 {
-    text-align: center;
     font-size: 40px;
     margin-bottom: 35px;
 }
@@ -43,7 +40,7 @@ h1 {
     gap: 15px;
 }
 
-/* Styles all drum buttons */
+/* General button design */
 .drum-button {
     width: 130px;
     height: 130px;
@@ -68,18 +65,18 @@ h1 {
     transition: transform 0.1s, background-color 0.2s;
 }
 
-/* Shows the keyboard shortcut inside each button */
+/* Keyboard shortcut */
 .drum-button span {
     font-size: 14px;
     opacity: 0.8;
 }
 
-/* Changes the kick button when hovered over */
+/* Kick button */
 .drum-button:hover {
     background-color: #c1121f;
 }
 
-/* Styles the ride button */
+/* Ride button */
 .ride-button {
     background-color: #457b9d;
 }
@@ -88,7 +85,7 @@ h1 {
     background-color: #1d5b7a;
 }
 
-/* Styles the snare button */
+/* Snare button */
 .snare-button {
     background-color: #7e57c2;
 }
@@ -97,7 +94,7 @@ h1 {
     background-color: #5e35b1;
 }
 
-/* Styles the tom button */
+/* Tom button */
 .tom-button {
     background-color: #2a9d8f;
 }
@@ -106,7 +103,7 @@ h1 {
     background-color: #20796e;
 }
 
-/* Styles the hi-hat button */
+/* Hi-hat button */
 .hihat-button {
     background-color: #e9a23b;
 }
@@ -115,12 +112,12 @@ h1 {
     background-color: #c47d18;
 }
 
-/* Makes buttons react when clicked */
+/* Button animation */
 .drum-button:active {
     transform: scale(0.90);
 }
 
-/* Adjusts the layout for smaller screens */
+/* Smaller screens */
 @media (max-width: 600px) {
 
     .drum-kit {
@@ -136,5 +133,4 @@ h1 {
         height: 110px;
         font-size: 18px;
     }
-
 }
