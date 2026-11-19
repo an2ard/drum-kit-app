@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Drum Kit</title>
+
+    <!-- Connects the CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main drum kit container -->
+    <main class="drum-kit">
+
+        <h1>Drum Kit</h1>
+
+        <!-- Button that plays the kick drum sound -->
+        <button id="kickButton" class="drum-button">
+            KICK
+        </button>
+
+        <!-- Preloads the kick drum audio file -->
+        <audio id="kickSound" src="sounds/kick.mp3" preload="auto"></audio>
+
+    </main>
+
+    <!-- Connects the JavaScript file -->
+    <script src="actions.js"></script>
+
+</body>
+</html>
