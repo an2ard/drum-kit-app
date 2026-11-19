@@ -25,14 +25,14 @@ body {
     text-align: center;
 }
 
-/* Styles and centers the main heading */
+/* Styles the main heading */
 h1 {
     text-align: center;
     font-size: 40px;
     margin-bottom: 30px;
 }
 
-/* Styles the kick drum button */
+/* Styles both drum buttons */
 .drum-button {
     width: 150px;
     height: 150px;
@@ -47,16 +47,27 @@ h1 {
     font-weight: bold;
 
     cursor: pointer;
+    margin: 10px;
 
     transition: transform 0.1s, background-color 0.2s;
 }
 
-/* Changes the button when the mouse hovers over it */
+/* Changes the kick button when hovered over */
 .drum-button:hover {
     background-color: #c1121f;
 }
 
-/* Makes the button react when clicked */
+/* Gives the ride button a different color */
+.ride-button {
+    background-color: #457b9d;
+}
+
+/* Changes the ride button when hovered over */
+.ride-button:hover {
+    background-color: #1d5b7a;
+}
+
+/* Makes the buttons react when clicked */
 .drum-button:active {
     transform: scale(0.90);
 }
